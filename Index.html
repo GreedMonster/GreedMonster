@@ -23,12 +23,14 @@
             justify-content: center;
             background-color: black;
             background-image: url('mainback.jpg');
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
 			font-family: Arial, sans-serif;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-            padding: 20px;
+            padding-top: 50px;
         }
         h1 {
             font-size: 24px;
@@ -39,6 +41,7 @@
         p {
             font-size: 18px;
             font-weight: bold;
+            color: white;
         }
         a {
             color: inherit;
@@ -58,7 +61,7 @@
                 height: auto;
             }
             body {
-                background-size: 100%;
+                background-size: cover;
             }
         }
 	</style>
