@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ibelonghere</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="YOUR_WEBSITE_URL">
+    <meta property="og:title" content="Ibelonghere">
+    <meta property="og:description" content="Immerse yourself in Ibelonghere's unique Android games and animated content! Explore, engage, and experience our exceptional gaming and animation universe.">
+    <meta property="og:image" content="LINK_TO_YOUR_IMAGE">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="YOUR_WEBSITE_URL">
+    <meta property="twitter:title" content="Ibelonghere">
+    <meta property="twitter:description" content="Immerse yourself in Ibelonghere's unique Android games and animated content! Explore, engage, and experience our exceptional gaming and animation universe.">
+    <meta property="twitter:image" content="LINK_TO_YOUR_IMAGE">
+
+	<style>
+        body {
+             margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            animation: bgAnimation 2s steps(4) infinite;
+            background-size: cover;
+			font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            grid-column: span 2;
+			 color: white;
+            animation: fadeIn 0.25s 2s forwards;
+            opacity: 0;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        a {
+            color: inherit;
+        }
+		  #header {
+            width: 2000px;
+            height: 500px;
+            /* Replace with your logo image */
+            background-image: url('logo.png');
+            background-size: cover;
+        }
+
+        @keyframes bgAnimation {
+            0%   { background-image: url('img1.png'); }
+            25%  { background-image: url('img2.png'); }
+            50%  { background-image: url('img3.png'); }
+            75%  { background-image: url('img4.png'); }
+            100% { background-image: url('img4.png'); }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .nav-buttons {
+            position: fixed;
+            /* Adjust position as per your design */
+            top: 10px;
+            left: 10px;
+        }
+
+        .nav-buttons button {
+            margin-right: 10px;
+        }
+		@media (max-width: 740px) {
+            #header {
+                width: 100%;
+                height: auto;
+            }
+
+            body {
+                background-size: 100%;
+            }
+        }
+		@media (max-width: 768px) {
+    #header {
+        width: 100%;
+        height: auto;
+    }
+
+    body {
+        background-size: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+	 <div id="header"></div>
+
+    <div class="nav-buttons">
+        <button onclick="location.href='#home'">Home</button>
+        <button onclick="location.href='privacypolicy.html'">Privacy</button>
+    </div>
+
+    <h1 id="home">Welcome to Ibelonghere!</h1>
+    <h1>Ibelonghere</h1>
+
+    <div id="games">
+        <h2>Games</h2>
+        <p><a href="LINK_TO_PLAYSTORE">Our Game on Playstore</a></p>
+        <p><a href="privacypolicy.html">Privacy Policy</a></p>
+    </div>
+
+    <div id="animation">
+        <h2>Animation</h2>
+        <p><a href="LINK_TO_YOUTUBE">Our YouTube Channel</a></p>
+    </div>
+
+    <div id="socials">
+        <h2>Socials</h2>
+        <p><a href="LINK_TO_TWITTER">Our Twitter</a></p>
+    </div>
+
+    <div id="contact">
+        <h2>Contact</h2>
+        <p><a href="mailto:EMAIL_ADDRESS">Email Us</a></p>
+    </div>
+</body>
+</html>
+
