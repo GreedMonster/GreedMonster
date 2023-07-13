@@ -3,26 +3,26 @@
 <head>
     <title>Greed Monster</title>
     <meta property="og:type" content="website">
-    <meta property="og:url" content="YOUR_WEBSITE_URL">
+    <meta property="og:url" content="https://GreedMonster.github.io/GreedMonster/Index.html">
     <meta property="og:title" content="Ibelonghere">
     <meta property="og:description" content="Immerse yourself in Ibelonghere's unique Android games and animated content! Explore, engage, and experience our exceptional gaming and animation universe.">
     <meta property="og:image" content="Tcard.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="YOUR_WEBSITE_URL">
+    <meta property="twitter:url" content="https://GreedMonster.github.io/GreedMonster/Index.html">
     <meta property="twitter:title" content="Ibelonghere">
     <meta property="twitter:description" content="Immerse yourself in Ibelonghere's unique Android games and animated content! Explore, engage, and experience our exceptional gaming and animation universe.">
     <meta property="twitter:image" content="Mcard.jpg">
 
 	<style>
         body {
-             margin: 0;
+            margin: 0;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: black;
-            animation: bgAnimation 2s steps(4) infinite;
+            background-image: url('mainback.jpg');
             background-size: cover;
 			font-family: Arial, sans-serif;
             display: grid;
@@ -34,9 +34,7 @@
             font-size: 24px;
             font-weight: 800;
             grid-column: span 2;
-			 color: white;
-            animation: fadeIn 0.25s 2s forwards;
-            opacity: 0;
+            color: white;
         }
         p {
             font-size: 18px;
@@ -45,69 +43,30 @@
         a {
             color: inherit;
         }
-		  #header {
-            width: 2000px;
+        #header {
+            width: 100%;
             height: 300px;
             /* Replace with your logo image */
             background-image: url('Header.jpg');
             background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-        @keyframes bgAnimation {
-            0%   { background-image: url('mainback.jpg'); }
-            25%  { background-image: url('mainback.jpg'); }
-            50%  { background-image: url('mainback.jpg'); }
-            75%  { background-image: url('mainback.jpg'); }
-            100% { background-image: url('mainback.jpg'); }
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .nav-buttons {
-            position: fixed;
-            /* Adjust position as per your design */
-            top: 10px;
-            left: 10px;
-        }
-
-        .nav-buttons button {
-            margin-right: 10px;
-        }
-		@media (max-width: 740px) {
+		@media (max-width: 760px) {
             #header {
-                width: 100%;
                 height: auto;
             }
-
             body {
                 background-size: 100%;
             }
         }
-		@media (max-width: 768px) {
-    #header {
-        width: 100%;
-        height: auto;
-    }
-
-    body {
-        background-size: 100%;
-    }
-}
-    </style>
+	</style>
 </head>
 <body>
-	 <div id="header"></div>
-
-    <div class="nav-buttons">
-        <button onclick="location.href='GreedMonster.html'">Home</button>
-        <button onclick="location.href='privacypolicy.html'">Privacy</button>
+	<div id="header">
+        <h1 id="home">Welcome to Greed Monster!</h1>
     </div>
-
-    <h1 id="home">Welcome to Greed Monster!</h1>
 
     <div id="games">
         <h2>Games</h2>
@@ -117,7 +76,6 @@
 
     <div id="animation">
         <img src="logo.jpg" alt="I belong here logo" style="width:20px; height:20px;">
-
         <p><a href="https://youtube.com/@ibelonghere">Animation</a></p>
     </div>
 
@@ -132,4 +90,3 @@
     </div>
 </body>
 </html>
-
