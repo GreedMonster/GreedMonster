@@ -14,15 +14,14 @@
     <meta property="twitter:description" content="Immerse yourself in Ibelonghere's unique Android games and animated content! Explore, engage, and experience our exceptional gaming and animation universe.">
     <meta property="twitter:image" content="Mcard.jpg">
 
-	<style>
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            padding-top: 300px;
-		display: flex;
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
@@ -54,43 +53,43 @@
             top: 0;
             left: 0;
             width: 100vw;
-            height: 0vh;
+            height: 15vh;  <!-- Set height to 15vh -->
             background-image: url('Header.jpg');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
         }
         .content-start {
-            padding-top: 300px;
+            padding-top: 15vh;  <!-- Aligns the content start with the header bottom -->
         }
-		@media (max-width: 760px) {
+        @media (max-width: 760px) {
             #header-container {
                 width: 100vw;
             }
             body {
                 background-size: cover;
             }
-			h1, h2 {
-            font-size: 26px;
-            font-weight: 800;
-            color: white;
-            text-align: center;
-        }
-        p {
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            text-align: center;
-        }
+            h1, h2 {
+                font-size: 26px;
+                font-weight: 800;
+                color: white;
+                text-align: center;
+            }
+            p {
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+            }
             img {
                 width: 40px;
                 height: 40px;
             }
         }
-	</style>
+    </style>
 </head>
 <body>
-	<div id="header-container"></div>
+    <div id="header-container"></div>
     <h1 id="home" class="content-start">Welcome to Greed Monster!</h1>
 
     <div id="games">
