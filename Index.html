@@ -23,6 +23,13 @@
             padding: 0;
             box-sizing: border-box;
         }
+		body {
+			   background-color: black;
+            background-image: url('Mainback.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+		}
 		.main-container {
             padding-top: 300px;
             display: flex;
@@ -30,11 +37,7 @@
             align-items: center;
             justify-content: flex-start;
             height: 100vh;
-            background-color: black;
-            background-image: url('Mainback.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+         
         }
         h1, h2 {
              font-family: 'Roboto', sans-serif;
@@ -57,13 +60,14 @@
 		@media (max-width: 760px) {
 			body {
 				max-width: 100%;
+				 background-image: url('mediaback.jpg');
+                background-size: cover;
+		      background-color: black; 
 			}
  .main-container {
 		     max-width: 80%;
         margin: 0 auto;
-		    background-image: url('mediaback.jpg');
-                background-size: cover;
-		      background-color: black; 
+		   
             }
             h1, h2 {
                 font-size: 30px;
