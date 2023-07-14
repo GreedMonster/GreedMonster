@@ -15,14 +15,17 @@
     <meta property="twitter:image" content="Mcard.jpg">
 
 	<style>
-        body {
+        * {
             margin: 0;
-		padding-top: 300px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            height: 100vh;
+            height: -85vh;
             background-color: black;
             background-image: url('Mainback.jpg');
             background-size: cover;
@@ -56,6 +59,9 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+        .content-start {
+            padding-top: 300px;
+        }
 		@media (max-width: 760px) {
             #header-container {
                 width: 100vw;
@@ -72,7 +78,7 @@
 </head>
 <body>
 	<div id="header-container"></div>
-    <h1 id="home">Welcome to Greed Monster!</h1>
+    <h1 id="home" class="content-start">Welcome to Greed Monster!</h1>
 
     <div id="games">
         <h2>Games</h2>
