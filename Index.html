@@ -15,13 +15,9 @@
     <meta property="twitter:image" content="Mcard.jpg">
 
 	<style>
-		  :root {
-
-    --header-height: 100px;
-		  }
         body {
             margin: 0;
-            padding-top: 350px;
+            padding-top: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -33,8 +29,6 @@
             background-repeat: no-repeat;
             background-position: center;
             font-family: Arial, sans-serif;
-            max-width: 50%;
-            margin: auto;
         }
         h1, h2 {
             font-size: 24px;
@@ -54,24 +48,26 @@
         #header {
             position: absolute;
             top: 0;
+            left: 25%;
             width: 50%;
-            height: 50%;
+            height: 150px;
             /* Replace with your logo image */
             background-image: url('Header.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
-		flex-direction: row;
             align-items: center;
             justify-content: center;
         }
 		@media (max-width: 760px) {
             #header {
+                width: 100%;
                 height: auto;
+                left: 0;
             }
             body {
                 background-size: cover;
-                font-size: 200%;
+                padding-top: 25%;
             }
             img {
                 width: 40px;
