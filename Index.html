@@ -60,7 +60,17 @@
 			display: flex;
 			align-items: center;
 		}
-		#games .play img {
+		#games img {
+			height: 100px;
+			width: 100px;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+			#play {
+			display: flex;
+			align-items: center;
+		}
+		#play img {
 			height: 100px;
 			width: 100px;
 			margin-right: 20px;
@@ -106,16 +116,23 @@
 			margin-right: 20px;
 			margin-left: 20px;
 		}
-		.slogo {
+		#games .slogo {
 					width: 25px;
 				height: 25px;
 			margin-right: 20px;
 			margin-left: 20px;
 		}
-		#games .play {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+		#animation .slogo {
+					width: 25px;
+				height: 25px;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+		#socials .slogo {
+					width: 25px;
+				height: 25px;
+			margin-right: 20px;
+			margin-left: 20px;
 		}
        
 		@media (max-width: 760px) {
@@ -138,7 +155,13 @@
 			#animation {
 				flex-wrap: wrap;
 			}
-			#games .play img {
+			#games img {
+			height: 50px;
+			width: 50px;
+				margin-right: 20px;
+			margin-left: 20px;
+		}
+			#play img {
 			height: 50px;
 			width: 50px;
 				margin-right: 20px;
@@ -174,7 +197,24 @@
 				margin-right: 20px;
 				margin-left: 20px;
 			}
-			
+			#games .slogo {
+				width: 15px;
+				height: 15px;
+				margin-right: 20px;
+				margin-left: 20px;
+			}
+			#animation .slogo {
+				width: 15px;
+				height: 15px;
+				margin-right: 20px;
+				margin-left: 20px;
+			}
+			#socials .slogo {
+				width: 15px;
+				height: 15px;
+				margin-right: 20px;
+				margin-left: 20px;
+			}
         }
 	</style>
 </head>
@@ -185,18 +225,16 @@
 		<h2><strong>Games</strong></h2>
     </div>
 		<div id="games">
-       
-     <div class="play">
 	     <img src="slimemoldmonster.png" alt="slime mold monster">  
 	    <p><a href="LINK_TO_PLAYSTORE">Play Greed Monster SOON</a></p>
      <img class="slogo" src="google-play.png" alt="google play logo">
 	</div>
 			<br>
-        <div class="play">
+        <div id="play">
 		<img src="businessmonster.png" alt="monster in a business suit"> 
 			<p><a href="privacypolicy.html">Privacy Policy</a></p>
     </div>
-			</div>
+			
 <br><br>
 		 <div class="headings">  
 			
