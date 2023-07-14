@@ -16,7 +16,12 @@
     <meta property="twitter:image" content="Mcard.jpg">
 
 	<style>
-		body {
+	        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+		.main-container {
             padding-top: 300px;
             display: flex;
             flex-direction: column;
@@ -48,7 +53,7 @@
         }
        
 		@media (max-width: 760px) {
-            body {
+            .main-container {
 		    background-image: url('mediaback.jpg');
                 background-size: cover;
 		      background-color: red; 
@@ -67,7 +72,7 @@
 	</style>
 </head>
 <body>
-	
+	<div class="main-container">
     <div id="games">
         <h2><strong>Games</strong></h2>
         <p><a href="LINK_TO_PLAYSTORE">Greed Monster on the Play Store - SOON</a></p>
@@ -89,5 +94,6 @@
         <h2><strong>Contact</strong></h2>
         <p><a href="mailto:russellnadin@gmail.com">Email</a></p>
     </div>
+	</div>
 </body>
 </html>
