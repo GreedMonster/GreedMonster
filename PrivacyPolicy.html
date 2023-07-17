@@ -19,10 +19,22 @@
 
     <style>
    body {
-            padding-top: 200px;
-            font-family: 'Roboto', sans-serif;
+ font-family: 'Roboto', sans-serif;
             max-width: 500px;
-            margin: auto;
+            		   background-color: black;
+            background-image: url('Mainback.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        		.main-container {
+            padding-top: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+         
         }
         h1, h2 {
             font-size: 32px;
@@ -40,10 +52,36 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+        @media (max-width: 760px) {
+	body {
+		 background-image: url('mediaback.jpg');
+                background-size: cover;
+		      background-color: black;  
+			}
+ .main-container {
+	max-width: 80%;
+        margin: 0 auto;    
+ 
+            }
+            h1, h2 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 23px;
+		    padding-bottom: 0;
+            }
+			        a {
+            font-family: 'Roboto', sans-serif; 
+		font-size: 23px;
+            font-weight: 700;
+            color: black;
+		color: inherit;
+				}
     </style>
 </head>
 <body>
-      <h1>Privacy Policy for GreedMonster</h1>
+    <div class=main-container>  
+        <h1>Privacy Policy for GreedMonster</h1>
     <p>Last updated: July 10, 2023</p>
     <h2>1. Introduction</h2>
     <p>GreedMonster ("we", "us", "our") operates GreedMonster ("the Game", "our Game"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Game.</p>
@@ -69,6 +107,7 @@
     <p>We may update our Privacy Policy from time to time. Thus, we advise you to review this periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on our website (<a href="https://greedmonster.github.io/greedmonster/privacypolicy.html">https://greedmonster.github.io/greedmonster/privacypolicy.html</a>); otherwise, you can find it in our Game's description on the Google Play Store. These changes are effective immediately, after they are posted.</p>
     <h2>8. Contact Us</h2>
     <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a class="email-link" href="mailto:ibelongheregames@gmail.com">ibelongheregames@gmail.com</a>.</p>
+    </div>
 </body>
 </html>
 
