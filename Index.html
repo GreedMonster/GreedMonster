@@ -93,12 +93,21 @@
 		}
 		
 		#progressUpdate2 #gm-vid, #animation #can-vid, #animation #tf-vid, #animation #pd-vid, #animation #tm-vid {
-			padding-bottom: 30px;
+			 position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
+    height: 0;
+    overflow: hidden;
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
 		}
-
+  #progressUpdate2 #gm-vid .iframe, #animation #can-vid.iframe, #animation #tf-vid .iframe, #animation #pd-vid .iframe, #animation #tm-vid .iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 		.line { 
 			height: 3px; 
 			background-color: black; 
@@ -142,11 +151,6 @@
 			margin-left: auto;
 				margin-right: auto;
 		}
-	#progressUpdate2 #gm-vid .iframe, #animation #can-vid.iframe, #animation #tf-vid .iframe, #animation #pd-vid .iframe, #animation #tm-vid .iframe {
-			width: 100%;
-		height: auto;
-		}
-
         }
 	</style>
 </head>
@@ -158,7 +162,7 @@
 		 <li class="list-group-item">In 2020, I started to draw, animate, and create videos digitally. The earlier videos drew inspiration from and entertained my children, and gave me the opportunity to learn and practice.</li> 
 		 <li class="list-group-item">In late 2022, I began learning programing using C# in Visual Studios and Unity.</li> 
 		 <li class="list-group-item">By the summer of 2023, the animation and programming combined, and my first full release game "Greed Monster" was completed and published on Google Play. You can <a href="https://play.google.com/store/apps/details?id=com.IBelongHereGames.GreedMonster1">play Greed Monster here</a>. <img class="slogo" src="google-play.png" alt="google play logo"></li> <br>
-		<div id="gm-vid"> <iframe width="560" height="315" src="https://www.youtube.com/embed/p1VTfJT-0FE?si=lS6Is-osPQASU_2O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+		<div id="gm-vid"> <iframe src="https://www.youtube.com/embed/p1VTfJT-0FE?si=lS6Is-osPQASU_2O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 		 <li class="list-group-item"><a href="PrivacyPolicy.html">Greed Monster Privacy Policy</a></li>
 		 <li class="list-group-item">More games are being planned and made for 2023 and 2024.</li> </ul> 		
     </div>		
@@ -173,19 +177,19 @@
     <p>Notable videos:</p>
 	    <h2>Canada's History</h2>
 	
-	   <div id="can-vid"> <iframe width="560" height="315" src="https://www.youtube.com/embed/n9_2jFf3EeI?si=h9I_-ZinLqKLh0c5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+	   <div id="can-vid"> <iframe src="https://www.youtube.com/embed/n9_2jFf3EeI?si=h9I_-ZinLqKLh0c5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 	      <br>  <br> 
 	    <h2>Tool Fairy</h2>
 	  
-	 <div id="tf-vid">   <iframe width="560" height="315" src="https://www.youtube.com/embed/WV7oOXrKO2w?si=B4BqTyrkdwOZkkS5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div>
+	 <div id="tf-vid">   <iframe src="https://www.youtube.com/embed/WV7oOXrKO2w?si=B4BqTyrkdwOZkkS5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><div>
 	      <br>  <br>     <br>  <br> 
 	    <h2>Prisoner's Dilemma</h2>
 	
-	  <div id="pd-vid">  <iframe width="560" height="315" src="https://www.youtube.com/embed/V79joYwDH1s?si=s5pYHBXXlmlQVkS9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+	  <div id="pd-vid">  <iframe src="https://www.youtube.com/embed/V79joYwDH1s?si=s5pYHBXXlmlQVkS9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 	      <br>  <br> 
 	    <h2>TerraMike Horse</h2>
 	 
-	<div id="tm-vid">    <iframe width="560" height="315" src="https://www.youtube.com/embed/nA2FjmwYCEo?si=lgIZLutweCF_Nx92" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+	<div id="tm-vid">    <iframe src="https://www.youtube.com/embed/nA2FjmwYCEo?si=lgIZLutweCF_Nx92" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 	      <br><br>
     
     </div>
