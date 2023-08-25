@@ -74,6 +74,7 @@
 		}
 		#animation, #contact {
 			text-align: center;
+			justify-content: center;
 		}
 		#progressUpdate2, #slj {
 			text-align: justify;
@@ -93,15 +94,10 @@
 		}
 		
 		#progressUpdate2 #gm-vid, #animation #can-vid, #animation #tf-vid, #animation #pd-vid, #animation #tm-vid {
-			  position: relative;
-    overflow: hidden;
-    width: 100%;
+			 flex-grow: 1;
 		}
   #progressUpdate2 #gm-vid .iframe, #animation #can-vid.iframe, #animation #tf-vid .iframe, #animation #pd-vid .iframe, #animation #tm-vid .iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+ width: 100%;
     height: auto;
   }
 		.line { 
