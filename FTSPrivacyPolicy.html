@@ -7,24 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Roboto', sans-serif;
-            background-image: url('SpaceBackground1.png');
-            background-size: contain;
-            background-position: top center;
-            background-repeat: no-repeat;
-            max-width: 600px;
-            width: 100%;
-            background-color: black;
+            margin: 0;
+      background-color: black;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+        .background-container {
+          background-image: url('SpaceBackground1.png');
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 100% auto;
+      width: 600px;
+      min-height: 100vh;
         }
 
-        .main-container {
+        .main-content {
             padding-top: 800px;
             max-width: 500px;
             margin: 0 auto;
@@ -57,21 +57,24 @@
             word-wrap: break-word;
         }
 
-        @media (max-width: 760px) {
-            .main-container {
-                padding-top: 400px;
-                font-size: 18px;
-                max-width: 90%;
-            }
-
-            h1, h2 {
-                font-size: 24px;
-            }
-        }
+        @media (max-width: 640px) {
+      .background-container {
+        width: 100%;
+      }
+      .main-content {
+        width: 90%;
+        padding-top: 400px;
+        font-size: 18px;
+      }
+      h1, h2 {
+        font-size: 24px;
+      }
+    }
     </style>
 </head>
 <body>
-    <div class="main-container">
+      <div class="background-container">
+    <div class="main-content">
         <h1>Privacy Policy for Fight The Sun</h1>
         <p>Last updated: July 10, 2023</p>
 
@@ -110,5 +113,6 @@
         <h2>9. Contact Us</h2>
         <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a href="mailto:ibelongheregames@gmail.com">ibelongheregames@gmail.com</a>.</p>
     </div>
+      </div>
 </body>
 </html>
