@@ -27,7 +27,7 @@
      background-color: #43b4be;
     }
 
-.home-button {
+    .home-button {
   position: fixed;
   left: 5vw;
   top: 50%;
@@ -37,11 +37,16 @@
   align-items: center;
   text-decoration: none;
   color: #000;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
   font-weight: 700;
-  z-index: 9999;
+  z-index: 2147483647; /* absolute top */
   pointer-events: auto;
 }
+
+.home-button:visited { color: #000; }
+.home-button:hover { opacity: 0.9; }
+.home-button:active { opacity: 0.8; }
+
 
 
 .home-button img {
@@ -179,6 +184,10 @@
   <header aria-hidden="true">
     <img id="headerImg" src="header.jpg" alt="">
   </header>
+<a class="home-button" href="https://greedmonster.github.io/GreedMonster/Index.html" aria-label="Home">
+  <img src="housemonster.png" alt="Home">
+  <span>Home</span>
+</a>
 
   <main class="text-scroll">
     <div class="content">
