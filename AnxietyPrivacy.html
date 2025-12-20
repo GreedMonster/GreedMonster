@@ -11,10 +11,10 @@
 
   <style>
     :root{
-      --text-max-width: 700px;
       --gap-below-header: 50px;
       --pad: 16px;
       --header-h: 0px; /* JS sets this */
+      --bg-w: 0px;     /* JS sets this */
     }
 
     * { box-sizing: border-box; }
@@ -23,10 +23,10 @@
       height: 100%;
       margin: 0;
       font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
-      color: #000;
+      color: #43b4be;
     }
 
-    /* Fixed background image: height = viewport, width auto (proportional) */
+    /* Fixed background image: height = viewport, width auto (proportional), centered */
     .bg {
       position: fixed;
       inset: 0;
@@ -34,45 +34,54 @@
       pointer-events: none;
       overflow: hidden;
     }
+
     .bg img {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       height: 100vh;
       width: auto;
       display: block;
     }
 
-    /* Header pinned, width matches bg rendered width, height auto */
+    /* Header pinned, centered, width matches bg rendered width, height auto */
     header {
       position: fixed;
       top: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 2;
       pointer-events: none;
-    }
-    header img {
-      display: block;
-      width: auto;   /* JS sets width in px */
-      height: auto;  /* proportional */
+      width: var(--bg-w);
     }
 
-    /* Scrollable text over background */
+    header img {
+      display: block;
+      width: 100%;  /* fill header container width */
+      height: auto; /* proportional */
+    }
+
+    /* Scrollable text over background; text constrained to background width */
     .text-scroll {
       position: relative;
       z-index: 1;
       height: 100vh;
-      overflow-y: scroll; /* keep scrollbar visible */
-      padding: var(--pad);
-      padding-top: calc(var(--header-h) + var(--gap-below-header) + var(--pad));
+      overflow-y: scroll; /* visible scrollbar */
+      padding-top: calc(var(--header-h) + var(--gap-below-header));
+      padding-bottom: var(--pad);
     }
 
+    /* Container is same width as background and centered */
     .content {
-      max-width: var(--text-max-width);
+      width: var(--bg-w);
       margin: 0 auto;
+      padding-left: var(--pad);
+      padding-right: var(--pad);
     }
 
-    p {
+    /* Typography + spacing */
+    p, li {
       font-size: 12px;
       font-weight: 500;
       margin: 10px 0;
@@ -90,6 +99,18 @@
       margin: 10px 0;
       line-height: 1.2;
     }
+    ul {
+      margin: 10px 0;
+      padding-left: 22px;
+    }
+    li {
+      font-size: 12px;
+      font-weight: 500;
+      margin: 6px 0;
+      line-height: 1.4;
+    }
+
+    a { color: inherit; }
 
     /* Visible scrollbar */
     .text-scroll::-webkit-scrollbar { width: 14px; }
@@ -114,35 +135,45 @@
 
   <main class="text-scroll">
     <div class="content">
-       <p>Anxiety Cards and Anxiety: Calming the Chaos Within are both &copy; Gail A. Barrett and are used wtih permission.</p>
-            <h1>Privacy Policy for Anxiety Cards</h1>
-    <p>Last updated: December 20, 2025</p>
-    <h2>1. Introduction</h2>
-    <p>Anxiety Cards ("we", "us", "our") operates Anxiety Cards ("the app", "our app"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our app.</p>
-    <p>We do not collect, use, or store your personal data in any way.</p>
-    <h2>2. Information Collection And Use</h2>
-    <p>We do not collect any personal data. We developed the app so that we do not have the ability or the need to access your personal data.</p>
-    <h2>3. Log Data</h2>
-    <p>As we do not collect data, we do not collect data in the form of log data either.</p>
-    <h2>4. Cookies</h2>
-    <p>Cookies are files with a small amount of data, which may include an anonymous unique identifier. However, our app does not use these "cookies" explicitly.</p>
-    <h2>5. Service Providers</h2>
-    <p>We may use third-party companies due to the following reasons:</p>
-    <ul>
+      <p>Anxiety Cards and Anxiety: Calming the Chaos Within are both &copy; Gail A. Barrett and are used wtih permission.</p>
+
+      <h1>Privacy Policy for Anxiety Cards</h1>
+      <p>Last updated: December 20, 2025</p>
+
+      <h2>1. Introduction</h2>
+      <p>Anxiety Cards ("we", "us", "our") operates Anxiety Cards ("the app", "our app"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our app.</p>
+      <p>We do not collect, use, or store your personal data in any way.</p>
+
+      <h2>2. Information Collection And Use</h2>
+      <p>We do not collect any personal data. We developed the app so that we do not have the ability or the need to access your personal data.</p>
+
+      <h2>3. Log Data</h2>
+      <p>As we do not collect data, we do not collect data in the form of log data either.</p>
+
+      <h2>4. Cookies</h2>
+      <p>Cookies are files with a small amount of data, which may include an anonymous unique identifier. However, our app does not use these "cookies" explicitly.</p>
+
+      <h2>5. Service Providers</h2>
+      <p>We may use third-party companies due to the following reasons:</p>
+      <ul>
         <li>To facilitate our app;</li>
         <li>To provide the app on our behalf;</li>
         <li>To perform app-related services; or</li>
         <li>To assist us in analyzing how our app is used.</li>
-    </ul>
-    <p>If you click on a third party link, you will be directed to that third party's site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites.</p>
-    <h2>6. Security</h2>
-    <p>Given that our app does not collect, use, or store any of your personal data, there is no personal data to protect. However, we are committed to ensuring the overall security of our app and its infrastructure. Our measures include, but are not limited to, diligent software development practices, regular software updates, and ongoing attention to potential security vulnerabilities.</p>
-    <h2>7. Changes To This Privacy Policy</h2>
-    <p>We may update our Privacy Policy from time to time. Thus, we advise you to review this periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on our website (<a href="https://greedmonster.github.io/greedmonster/AnxietyPrivacy.html">https://greedmonster.github.io/greedmonster/AnxietyPrivacy.html</a>); otherwise, you can find it in our app's description on the Google Play Store. These changes are effective immediately, after they are posted.</p>
-   <h2>8. Play Families Policies</h2>
-	  <p>We are committed to follow the Play Families policy. Further information can be found <a href="https://support.google.com/googleplay/android-developer/answer/9893335">here</a> </p>
-	    <h2>9. Contact Us</h2>
-    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a class="email-link" href="mailto:ibelongheregames@gmail.com">ibelongheregames@gmail.com</a>.</p>
+      </ul>
+      <p>If you click on a third party link, you will be directed to that third party's site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites.</p>
+
+      <h2>6. Security</h2>
+      <p>Given that our app does not collect, use, or store any of your personal data, there is no personal data to protect. However, we are committed to ensuring the overall security of our app and its infrastructure. Our measures include, but are not limited to, diligent software development practices, regular software updates, and ongoing attention to potential security vulnerabilities.</p>
+
+      <h2>7. Changes To This Privacy Policy</h2>
+      <p>We may update our Privacy Policy from time to time. Thus, we advise you to review this periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on our website (<a href="https://greedmonster.github.io/greedmonster/AnxietyPrivacy.html">https://greedmonster.github.io/greedmonster/AnxietyPrivacy.html</a>); otherwise, you can find it in our app's description on the Google Play Store. These changes are effective immediately, after they are posted.</p>
+
+      <h2>8. Play Families Policies</h2>
+      <p>We are committed to follow the Play Families policy. Further information can be found <a href="https://support.google.com/googleplay/android-developer/answer/9893335">here</a>.</p>
+
+      <h2>9. Contact Us</h2>
+      <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at <a class="email-link" href="mailto:ibelongheregames@gmail.com">ibelongheregames@gmail.com</a>.</p>
     </div>
   </main>
 
@@ -151,28 +182,28 @@
       const bg = document.getElementById('bgImg');
       const header = document.getElementById('headerImg');
 
-      function syncHeaderToBackground() {
+      function syncSizes() {
         if (!bg.complete || !header.complete) return;
 
-        // bg is height-driven (100vh). Its rendered width is what we want.
-        const bgRect = bg.getBoundingClientRect();
-        const bgWidth = Math.round(bgRect.width);
+        // Get rendered background width (height-driven 100vh, width auto)
+        const bgWidth = Math.round(bg.getBoundingClientRect().width);
 
-        // Force header to match that width; height will scale proportionately.
-        header.style.width = bgWidth + 'px';
+        // Expose bg width to CSS so header + text container match it exactly
+        document.documentElement.style.setProperty('--bg-w', bgWidth + 'px');
 
-        // Now measure header height and expose it to CSS for text offset.
-        const headerRect = header.getBoundingClientRect();
-        document.documentElement.style.setProperty('--header-h', Math.round(headerRect.height) + 'px');
+        // After header width is set, measure its rendered height for text offset
+        // (force a layout read after width update)
+        requestAnimationFrame(() => {
+          const headerHeight = Math.round(header.getBoundingClientRect().height);
+          document.documentElement.style.setProperty('--header-h', headerHeight + 'px');
+        });
       }
 
-      // Run when images load, and on resize (orientation/viewport changes).
-      bg.addEventListener('load', syncHeaderToBackground);
-      header.addEventListener('load', syncHeaderToBackground);
-      window.addEventListener('resize', syncHeaderToBackground);
+      bg.addEventListener('load', syncSizes);
+      header.addEventListener('load', syncSizes);
+      window.addEventListener('resize', syncSizes);
 
-      // In case images are cached and already complete:
-      syncHeaderToBackground();
+      syncSizes();
     })();
   </script>
 </body>
